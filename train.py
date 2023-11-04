@@ -160,7 +160,7 @@ def train(model, total_epoch):
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum, weight_decay=args.weight_decay)
 
     scheduler = None
-    if args.use_lr_scheduler:
+    if args.use_scheduler:
         scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=args.lr_scheduler_step_size,
                                               gamma=args.lr_scheduler_gamma)
 
@@ -193,7 +193,7 @@ def train(model, total_epoch):
 
             loss_sum += loss.item()
 
-        if args.use_lr_scheduler:
+        if args.use_scheduler:
             scheduler.step()
 
         acc = total_correct / total_num
