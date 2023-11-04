@@ -1,4 +1,4 @@
-name: 'full'
+name: 'w/o pretrained, w/o gradient clip, w/o augmentation, w/o scheduler'
 
 epochs: 50
 
