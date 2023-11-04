@@ -236,6 +236,6 @@ if __name__ == '__main__':
 
     model.to(device)
 
-    wandb.init(project="ResNet18_DTD_full_experiment", config=args)
+    wandb.init(project="ResNet18_DTD_full_experiment", config=args, name=args.name)
     wandb.watch(model, log_freq=1)
     train(model, args.epochs)
