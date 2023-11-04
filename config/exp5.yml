@@ -1,0 +1,24 @@
+name: 'full'
+
+epochs: 50
+
+lr: 0.01
+momentum: 0.9
+weight_decay: 0.0001
+
+dataroot: 'data'
+batch_size: 64
+
+use_pretrained: true
+pretrained_path: 'checkpoints/resnet18-f37072fd.pth'
+
+freeze_backbone: true
+freeze_until: 99999  # do not unfreeze
+
+clip_grad: true
+
+use_augmentation: true
+
+use_scheduler: true
+lr_scheduler_step_size: 10
+lr_scheduler_gamma: 0.1
