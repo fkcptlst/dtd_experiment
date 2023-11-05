@@ -37,7 +37,7 @@
 - learning rate: 0.01
 - momentum: 0.9
 - weight decay: 0.0001
-- scheduler: CosineAnnealingLR (if used)
+- scheduler: StepLR (if used)
 - lr_scheduler_step_size: 10
 - lr_scheduler_gamma: 0.1
 
